@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aws-profiles"
-version = "0.1.2"
+version = "1.0.0"
 description = "Simple Script to list all named profiles in ~/.aws/config"
 authors = ["Brian Peterson <brian.peterson@cloudshift.cc>"]
 packages = [ {include = "src"} ]
