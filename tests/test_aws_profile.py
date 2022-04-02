@@ -1,4 +1,4 @@
-from aws_profile import aws_profile
+from src import aws_profile
 from io import TextIOWrapper, BytesIO
 from unittest import mock
 

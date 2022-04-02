@@ -58,9 +58,9 @@ jobs:
       - name: Lint
         run: |
           source .venv/bin/activate
-          black
-          flake8 aws_profile
+          black src
+          flake8 src
       - name: PyTest
         run: |
           source .venv/bin/activate
-          pytest --cov=aws_profile tests/
+          pytest --cov=src tests/

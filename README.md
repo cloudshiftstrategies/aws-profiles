@@ -24,3 +24,10 @@ profile3
 ```
 pip3 install aws-profiles
 ```
+
+## Contributing
+
+#### Testing
+```
+poetry run pytest --cov
+```
