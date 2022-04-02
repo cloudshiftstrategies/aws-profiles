@@ -47,7 +47,7 @@ jobs:
           source .venv/bin/activate  
           poetry build
       #----------------------------------------------
-      #              build the package
+      #   https://github.com/bjoluc/semantic-release-config-poetry
       #----------------------------------------------
       - uses: bjoluc/semantic-release-config-poetry@v1
         with:
