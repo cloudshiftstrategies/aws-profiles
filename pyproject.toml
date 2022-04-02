@@ -1,13 +1,25 @@
 [tool.poetry]
 name = "aws-profiles"
-version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+version = "0.1.2"
+description = "Simple Script to list all named profiles in ~/.aws/config"
+authors = ["Brian Peterson <brian.peterson@cloudshift.cc>"]
+packages = [ {include = "aws_profile"} ]
+keywords = ["aws", "awscli", "aws-cli"]
+license = "MIT"
+repository = "https://github.com/cloudshiftstrategies/aws-profiles"
+
+[tool.poetry.scripts]
+aws_profile = 'aws_profile.aws_profile:main'
+aws_profiles = 'aws_profile.aws_profile:main'
 
 [tool.poetry.dependencies]
 python = "^3.9"
 
 [tool.poetry.dev-dependencies]
+black = "^22.3.0"
+pytest = "^7.1.1"
+coverage = "^6.3.2"
+pytest-cov = "^3.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
