@@ -1,6 +1,6 @@
 # aws-profiles
 
-A super simple tool to list all available named profile in the ~/.aws/config file
+A super simple tool to list all available named profiles in the ~/.aws/config file
 
 This is useful when you have a lot of profiles defined and can never remember the exact
 names to use in an aws cli command like `aws s3 list --profile XXXX` or when setting the
@@ -21,13 +21,27 @@ profile3
 * python3.6+
 
 ## Installation
+Typically, this tool will be installed in your home directory
 ```
-pip3 install aws-profiles
+pip3 install --user --upgrade aws-profiles
 ```
 
 ## Contributing
+#### Prerequisites
+- python3.6+
+- [poetry](https://python-poetry.org/docs/)
 
-#### Testing
+#### Installation and testing
 ```
-poetry run pytest --cov
+poetry install
+poetry run pytest --cov=src
+poetry run black src
+poetry run flake8 src
 ```
+
+#### Committing
+- commits must be formatted using angular commit format. Use `cz commit` to get help
+- commits will be linted with a pre-commit-hook for commitizen
+
+#### Publishing
+- github actions uses symantec release to increment version and publish to pypi upon merge to main branch
